@@ -33,7 +33,7 @@ set_password(){
 # Set domain
 set_domain(){
     echo -e "\033[1;34mPlease enter your domain:\033[0m"
-    echo "Enter your domain name;And please press the Enter key"
+    echo "Enter your domain name;And please press the Enter key:"
     read domain
     str=`echo $domain | gawk '/^([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/{print $0}'`
     while [ ! -n "${str}" ]
