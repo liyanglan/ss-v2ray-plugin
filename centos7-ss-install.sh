@@ -12,8 +12,8 @@ fi
 [ `whoami` != "root" ] && echo -e "\033[1;31mThis script must be run as root.\033[0m" && exit 1
 
 # Version
-LIBSODIUM_VER=1.0.17
-MBEDTLS_VER=2.16.0
+LIBSODIUM_VER=1.0.18
+MBEDTLS_VER=2.16.3
 ss_file=0
 v2_file=0
 get_latest_ver(){
@@ -25,16 +25,15 @@ get_latest_ver(){
 set_password(){
     clear
     echo -e "\033[1;34mPlease enter password for shadowsocks-libev:\033[0m"
-    read -p "(Default password: M3chD09):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="M3chD09"
+    read -p "(Default password: liyanglan):" shadowsockspwd
+    [ -z "${shadowsockspwd}" ] && shadowsockspwd="liyanglan"
     echo -e "\033[1;35mpassword = ${shadowsockspwd}\033[0m"
 }
 
 # Set domain
 set_domain(){
     echo -e "\033[1;34mPlease enter your domain:\033[0m"
-    echo "If you don't have one, you can register one for free at:"
-    echo "https://my.freenom.com/clientarea.php"
+    echo "Enter your domain name;And please press the Enter key"
     read domain
     str=`echo $domain | gawk '/^([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/{print $0}'`
     while [ ! -n "${str}" ]
@@ -49,7 +48,7 @@ set_domain(){
 
 # Pre-installation
 pre_install(){
-    read -p "Press any key to start the installation." a
+    read -p ""Press Enter key to start the installation." a
     echo -e "\033[1;34mStart installing. This may take a while.\033[0m"
     yum install -y epel-release
     yum install -y git wget gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel zlib-devel openssl-devel rng-tools
@@ -146,10 +145,15 @@ ss_conf(){
     cat >/etc/shadowsocks-libev/config.json << EOF
 {
     "server":"0.0.0.0",
+    "nameserver": "8.8.8.8",
     "server_port":443,
     "password":"$shadowsockspwd",
     "timeout":300,
     "method":"aes-256-gcm",
+    "fast_open": true,
+    "reuse_port": true,
+    "no_delay": true,
+    "mode": "tcp_and_udp",
     "plugin":"v2ray-plugin",
     "plugin_opts":"server;tls;cert=/etc/letsencrypt/live/$domain/fullchain.pem;key=/etc/letsencrypt/live/$domain/privkey.pem;host=$domain;loglevel=none"
 }
