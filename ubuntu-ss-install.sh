@@ -145,10 +145,15 @@ ss_conf(){
     cat >/etc/shadowsocks-libev/config.json << EOF
 {
     "server":"0.0.0.0",
+    "nameserver": "8.8.8.8",
     "server_port":443,
     "password":"$shadowsockspwd",
     "timeout":300,
     "method":"aes-256-gcm",
+    "fast_open": true,
+    "reuse_port": true,
+    "no_delay": true,
+    "mode": "tcp_and_udp",
     "plugin":"v2ray-plugin",
     "plugin_opts":"server;tls;cert=/etc/letsencrypt/live/$domain/fullchain.pem;key=/etc/letsencrypt/live/$domain/privkey.pem;host=$domain;loglevel=none"
 }
