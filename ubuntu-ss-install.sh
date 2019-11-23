@@ -33,7 +33,7 @@ set_password(){
 # Set domain
 set_domain(){
     echo "\033[1;34mPlease enter your domain:\033[0m"
-    echo "Enter your domain name;And please press the Enter key"
+    echo "Enter your domain name;And please press the Enter key:"
     read domain
     str=`echo $domain | grep '^\([a-zA-Z0-9_\-]\{1,\}\.\)\{1,\}[a-zA-Z]\{2,5\}'`
     while [ ! -n "${str}" ]
