@@ -11,23 +11,24 @@ VPS
 
 
 ### 用法
-``
+```bash
 # 安装
 ## CentOS 7
 wget -O centos7-ss-install.sh https://github.com/M3chD09/shadowsocks-with-v2ray-plugin-install/raw/master/centos7-ss-install.sh
 chmod +x centos7-ss-install.sh
 ./centos7-ss-install.sh
 
-## Ubuntu 18.04 / 16.04或Debian 9
+## Ubuntu 18.04/16.04 或 Debian 9
 wget -O ubuntu-ss-install.sh https://github.com/M3chD09/shadowsocks-with-v2ray-plugin-install/raw/master/ubuntu-ss-install.sh
 chmod +x ubuntu-ss-install.sh
 ./ubuntu-ss-install.sh
 
-＃使用systemctl管理shadowsocks
+# 使用systemctl管理shadowsocks
 systemctl status shadowsocks
 systemctl start shadowsocks
 systemctl stop shadowsocks
 ```
-＃＃＃ 注意
+### 注意
 在CentOS 7，Ubuntu 18.04 / 16.04和Debian 9上进行了测试。
 ***正在施工。***
+***Under construction.***
