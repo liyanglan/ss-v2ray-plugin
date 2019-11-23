@@ -12,7 +12,7 @@ fi
 [ `whoami` != "root" ] && echo "\033[1;31mThis script must be run as root.\033[0m" && exit 1
 
 # Version
-LIBSODIUM_VER=1.0.17
+LIBSODIUM_VER=1.0.18
 MBEDTLS_VER=2.16.0
 ss_file=0
 v2_file=0
