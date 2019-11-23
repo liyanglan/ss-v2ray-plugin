@@ -14,12 +14,12 @@ VPS
 ```bash
 # 安装
 ## CentOS 7
-wget -O centos7-ss-install.sh https://github.com/M3chD09/shadowsocks-with-v2ray-plugin-install/raw/master/centos7-ss-install.sh
+wget -O centos7-ss-install.sh https://raw.githubusercontent.com/liyanglan/ss-v2ray-plugin/master/centos7-ss-install.sh
 chmod +x centos7-ss-install.sh
 ./centos7-ss-install.sh
 
 ## Ubuntu 18.04/16.04 或 Debian 9
-wget -O ubuntu-ss-install.sh https://github.com/M3chD09/shadowsocks-with-v2ray-plugin-install/raw/master/ubuntu-ss-install.sh
+wget -O ubuntu-ss-install.sh https://raw.githubusercontent.com/liyanglan/ss-v2ray-plugin/master/ubuntu-ss-install.sh
 chmod +x ubuntu-ss-install.sh
 ./ubuntu-ss-install.sh
 
