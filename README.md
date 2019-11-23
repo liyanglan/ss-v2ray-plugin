@@ -1,7 +1,7 @@
 ### 介绍
 
 1、安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev) 和 [v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin).  
-2、从[Let’s Encrypt](https://letsencrypt.org)获取证书，以启用shadowsocks上的websocket（HTTPS）。
+2、从[Let’s Encrypt](https://letsencrypt.org)获取证书，用以启用shadowsocks上的websocket（HTTPS）。
 
 您必须通过v2ray插件和通过443端口使用shadowsocks，甚至可以像[Cloudflare](https://www.cloudflare.com/)一样在CDN后面运行您的shadowsocks服务器。
 
@@ -30,6 +30,13 @@ systemctl stop shadowsocks
 ```
 ### 注意
 在CentOS 7，Ubuntu 18.04 / 16.04和Debian 9上进行了测试。
+
+# Windows客户端使用：
+
+### [shadowsocks-windows客户端下载](https://github.com/shadowsocks/shadowsocks-windows/releases)
+
+### [v2ray-plugin下载](https://github.com/shadowsocks/v2ray-plugin/releases)，下载完成后和shadowsocks-windows客户端放在同一个目录，并且改名为v2ray-plugin。
+
 
 ***正在施工。***
 
