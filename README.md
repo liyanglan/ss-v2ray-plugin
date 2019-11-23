@@ -14,12 +14,12 @@
 ```bash
 # 安装
 ## CentOS 7
-wget -O centos7-ss-install.sh https://raw.githubusercontent.com/liyanglan/ss-v2ray-plugin/master/centos7-ss-install.sh
+wget -O centos7-ss-install.sh https://git.io/JeiRt
 chmod +x centos7-ss-install.sh
 ./centos7-ss-install.sh
 
 ## Ubuntu 18.04/16.04 或 Debian 9
-wget -O ubuntu-ss-install.sh https://raw.githubusercontent.com/liyanglan/ss-v2ray-plugin/master/ubuntu-ss-install.sh
+wget -O ubuntu-ss-install.sh https://git.io/JeiRq
 chmod +x ubuntu-ss-install.sh
 ./ubuntu-ss-install.sh
 
