@@ -12,7 +12,7 @@ VPS
 
 ### 用法
 ``
-＃安装
+# 安装
 ## CentOS 7
 wget -O centos7-ss-install.sh https://github.com/M3chD09/shadowsocks-with-v2ray-plugin-install/raw/master/centos7-ss-install.sh
 chmod +x centos7-ss-install.sh
