@@ -30,5 +30,6 @@ systemctl stop shadowsocks
 ```
 ### 注意
 在CentOS 7，Ubuntu 18.04 / 16.04和Debian 9上进行了测试。
+
 ***正在施工。***
-***Under construction.***
+
