@@ -48,7 +48,7 @@ set_domain(){
 
 # Pre-installation
 pre_install(){
-    read -p ""Press Enter key to start the installation." a
+    read -p "Press Enter key to start the installation." a
     echo -e "\033[1;34mStart installing. This may take a while.\033[0m"
     yum install -y epel-release
     yum install -y git wget gettext gcc autoconf libtool automake make asciidoc xmlto c-ares-devel libev-devel zlib-devel openssl-devel rng-tools
